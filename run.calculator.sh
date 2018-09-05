@@ -4,6 +4,10 @@ rm -rf ./packages
 mkdir packages
 mv ./complex-number ./packages/complex-number
 
+Echo "Clean Dist folder"
+rm -rf ./src/dist
+mkdir ./src/dist
+
 Echo "Generating calculator binary"
 g++ -c ./src/implementations/calculator.cpp
 rm -rf ./src/dist/calculator.o
