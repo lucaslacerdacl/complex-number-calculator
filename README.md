@@ -14,16 +14,16 @@
 
 ### Setting up
 
-Execute the `run.calculator.sh` file to generate the binary files inside `dist` folder and get packages.
+Execute the `run.sh` file to generate the binary files inside `dist` folder and get packages.
 
 For OSX:
 ```shell
-sh ./run.calculator.sh
+sh ./run.sh
 ```
 
 For Windows:
 ```shell
-./run.calculator.sh
+./run.sh
 ```
 
 Execute the `calculator.euclidean.sh` file to run with euclidean implementation or the `calculator.polar.sh` file to run with polar implementation.
