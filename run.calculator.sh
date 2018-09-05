@@ -1,7 +1,10 @@
 Echo "Getting packages"
 git clone https://github.com/LucasLacerdaCL/complex-number.git
-rm -rf ./packages/complex-number
-mv ./complex-number ./packages/
+rm -rf ./packages
+mkdir packages
+mv ./complex-number ./packages/complex-number
+
+sleep 5
 
 Echo "Generating calculator binary"
 g++ -c ./src/implementations/calculator.cpp
