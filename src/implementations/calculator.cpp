@@ -64,38 +64,38 @@ void Calculator::ShowOperations()
     if (inputOperation == 1)
     {
         Complex result = _firstComplex + _secondComplex;
-        PrintResults(result);
+        PrintResult(result);
     } 
     else if (inputOperation == 2)
     {
         Complex result = _firstComplex - _secondComplex;
-        PrintResults(result);
+        PrintResult(result);
     } 
     else if (inputOperation == 3)
     {
         Complex result = _firstComplex * _secondComplex;
-        PrintResults(result);
+        PrintResult(result);
     } 
     else if (inputOperation == 4)
     {
         Complex result = _firstComplex / _secondComplex;
-        PrintResults(result);
+        PrintResult(result);
     } 
     else if (inputOperation == 5)
     {
-        PrintResults(_firstComplex.Module());        
+        PrintResult(_firstComplex.Module());        
     } 
     else if (inputOperation == 6)
     {
-        PrintResults(- _firstComplex);        
+        PrintResult(- _firstComplex);        
     } 
     else if (inputOperation == 7)
     {
-        PrintResults(_firstComplex.Invert());
+        PrintResult(_firstComplex.Invert());
     } 
     else if (inputOperation == 8)
     {
-        PrintResults(_firstComplex.Conjugated());
+        PrintResult(_firstComplex.Conjugated());
     } 
     else 
     {
@@ -104,13 +104,13 @@ void Calculator::ShowOperations()
     }
 };
 
-void Calculator::PrintResults(Complex complexToBePrinted)
+void Calculator::PrintResult(Complex complexToBePrinted)
 {
     std::cout << complexToBePrinted.GetRealNumber() << " + " << complexToBePrinted.GetImaginaryNumber() << "i" << std::endl;
     std::cout << std::endl;
 };
 
-void Calculator::PrintResults(double value)
+void Calculator::PrintResult(double value)
 {
     std::cout << value << std::endl;
     std::cout << std::endl;

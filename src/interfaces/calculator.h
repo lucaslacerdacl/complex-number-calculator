@@ -10,6 +10,6 @@ class Calculator
   private:
     Complex _firstComplex;
     Complex _secondComplex;
-    void PrintResults(double value);
-    void PrintResults(Complex complexToBePrinted);
+    void PrintResult(double value);
+    void PrintResult(Complex complexToBePrinted);
 };
