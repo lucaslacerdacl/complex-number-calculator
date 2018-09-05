@@ -6,10 +6,10 @@ class Calculator
   public:
     Calculator();
     void ShowOperations();
-    void PrintResults(Complex complexToBePrinted);
 
   private:
     Complex _firstComplex;
     Complex _secondComplex;
     void PrintResults(double value);
+    void PrintResults(Complex complexToBePrinted);
 };
