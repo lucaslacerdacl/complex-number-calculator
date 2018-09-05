@@ -4,8 +4,6 @@ rm -rf ./packages
 mkdir packages
 mv ./complex-number ./packages/complex-number
 
-sleep 5
-
 Echo "Generating calculator binary"
 g++ -c ./src/implementations/calculator.cpp
 rm -rf ./src/dist/calculator.o
