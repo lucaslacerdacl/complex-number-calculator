@@ -22,10 +22,7 @@ echo "Getting packages"
             ./run.sh
             if [ -f "../../run.sh" ] && [ -f "./packages" ]
             then
-                if [ ! -d "../../packages/${dependencieName}" ]
-                then
-                    mv ./packages/* ../../packages
-                fi
+                mv ./packages/* ../../packages
             fi
             cd ../../
     done
