@@ -34,6 +34,10 @@ echo "Getting packages"
 
 echo -e "\nGenerating calculator binary"
 {
+    if [ ! -d "./src/dist" ]
+    then
+        mkdir ./src/dist
+    fi
     g++ -c ./src/implementations/calculator.cpp
     rm -rf ./src/dist/calculator.o
     mv ./calculator.o ./src/dist/
@@ -41,6 +45,10 @@ echo -e "\nGenerating calculator binary"
 
 echo -e "\nGenerating main binary"
 {
+    if [ ! -d "./src/dist" ]
+    then
+        mkdir ./src/dist
+    fi
     g++ -c ./src/main.cpp
     rm -rf ./src/dist/main.o
     mv ./main.o ./src/dist/
