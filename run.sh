@@ -22,7 +22,7 @@ echo "Getting packages"
             ./run.sh
             if [ -f "../../../run.sh" ] && [ -f "./packages" ]
             then
-                mv ./packages/* ../../packages
+                mv ./packages/* ../../../packages
             fi
             cd ../../
     done
