@@ -1,3 +1,5 @@
+#pragma once
+
 #include <iostream>
 #include "../../packages/complex-number/src/interfaces/complex.h"
 
