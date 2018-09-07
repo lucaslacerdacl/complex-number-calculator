@@ -13,28 +13,26 @@ echo "Getting packages"
             dependencieURL=(${arrDependencie[1]})
             dependencieName=(${arrDependencie[0]})
 
-            echo "${dependencieName}"
-
             git clone "${dependencieURL}"
             mv ./"${dependencieName}" ./packages/"${dependencieName}"
 
             cd ./packages/"${dependencieName}"
             ./run.sh
-            if [ -f "../../../../run.sh" ] && [ -f "./packages" ]
+            if [ -f "../../run.sh" ] && [ -d "./packages" ]
             then
-                mv ./packages/* ../../../../packages
+                cp -r -f ./packages/* ../../packages
             fi
             cd ../../
     done
 } &> /dev/null
 
+if [ ! -d "./src/dist" ]
+then
+    mkdir ./src/dist
+fi
 
 echo -e "\nGenerating calculator binary"
 {
-    if [ ! -d "./src/dist" ]
-    then
-        mkdir ./src/dist
-    fi
     g++ -c ./src/implementations/calculator.cpp
     rm -rf ./src/dist/calculator.o
     mv ./calculator.o ./src/dist/
@@ -42,10 +40,6 @@ echo -e "\nGenerating calculator binary"
 
 echo -e "\nGenerating main binary"
 {
-    if [ ! -d "./src/dist" ]
-    then
-        mkdir ./src/dist
-    fi
     g++ -c ./src/main.cpp
     rm -rf ./src/dist/main.o
     mv ./main.o ./src/dist/
