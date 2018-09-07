@@ -14,6 +14,11 @@
 
 ### Setting up
 
+Inside the `run.sh` file you can add repositories to use like the example bellow:
+```shell
+dependencies=("complex-number;https://github.com/LucasLacerdaCL/complex-number.git")
+```
+
 Execute the `run.sh` file to generate the binary files inside `dist` folder and get packages.
 
 For OSX:
@@ -26,7 +31,26 @@ For Windows:
 ./run.sh
 ```
 
-Execute the `calculator.euclidean.sh` file to run with euclidean implementation or the `calculator.polar.sh` file to run with polar implementation.
+Inside the `bootstrap.sh` file you can inject the dependencies like the example bellow:
+```shell
+yourBinary="exemple.o"
+yourMain="main.o"
+
+imports=("complex-number;complex.euclidean.o")
+
+cmdLine="./${yourBinary} ./${yourMain}"
+```
+
+Execute the `bootstrap.sh` file to generate the `main.exe` file.
+
+For OSX:
+```shell
+sh ./bootstrap.sh
+```
+For Windows:
+```shell
+./bootstrap.sh
+```
 
 ## Licensing
 
