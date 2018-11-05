@@ -1,0 +1,8 @@
+{
+  "fileName": "complex-calculator",
+  "binaries": [
+    "dist/main.o",
+    "dist/calculator.o",
+    "cpm_modules/complex-number/dist/complex.polar.o"
+  ]
+}

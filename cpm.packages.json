@@ -1,0 +1,11 @@
+{
+  "name": "complex-number-calculator",
+  "description": "Provide operations on complex numbers",
+  "version": "1.0.0",
+  "dependencies": [
+    {
+      "name": "complex-number",
+      "url": "https://github.com/LucasLacerdaCL/complex-number.git"
+    }
+  ]
+}

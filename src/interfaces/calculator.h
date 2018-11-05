@@ -1,7 +1,7 @@
 #pragma once
 
 #include <iostream>
-#include "../../packages/complex-number/src/interfaces/complex.h"
+#include "../../cpm_modules/complex-number/src/interfaces/complex.h"
 
 class Calculator
 {
